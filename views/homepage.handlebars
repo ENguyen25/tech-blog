@@ -1,10 +1,26 @@
-{{#each blogPosts as |posts|}}
-<div class="blog-post">
-  <div class="blog-post-header">
-    <p>{{title}}</p>
-  </div>
-  <div class="blog-post-content">
-    <p>{{content}}</p>
-  </div>
+<div class='add-blog-post'>
+    <h2>Add new blog post</h2>
+    <form class='new-blog-post'>
+      <label for='post_name'>Title:</label>
+      <br />
+      <textarea id='post_name' name='post_name' rows='2' cols='30'></textarea>
+      <br />
+      <label for='content'>Content:</label>
+      <br />
+      <textarea id='content' name='content' rows='5' cols='30'></textarea>
+      <br />
+      <button type='submit' value='Submit'>Submit</button>
+    </form>
 </div>
+
+{{#each blogPosts as |posts|}}
+<section class="card">
+  <a href="/post/{{posts.id}}">
+      <div class="blog-post-header">
+        <p>{{posts.title}}</p>
+      </div>
+  </a>
+</section>
 {{/each}}
+
+<script src="/js/new-post.js"></script>
