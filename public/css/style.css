@@ -15,3 +15,11 @@
 .field {
     width: 60%;
 }
+
+.update-form {
+    width: 100%;
+}
+
+.content-input {
+    height: 300px;
+}

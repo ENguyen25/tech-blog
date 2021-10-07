@@ -1,41 +1,38 @@
 <section class="notification is-success">
-    <div class="is-size-3 has-text-weight-bold is-underlined mb-4">
-      <p>{{title}}</p>
-    </div>
-    <div class="is-size-4 has-text-weight-medium">
-      <p>{{username}}</p>
-    </div>
-    <div class="is-size-4 has-text-weight-medium mb-4">
-      <p>{{content}}</p>
-    </div>
-    <div class="is-size-6">
-      <p>Posted on {{format_date createdAt}}</p>
-    </div>
+  <div class="is-size-3 has-text-weight-bold is-underlined mb-4">
+    <p>{{title}}</p>
+  </div>
+  <div class="is-size-4 has-text-weight-medium">
+    <p>{{username}}</p>
+  </div>
+  <div class="is-size-4 has-text-weight-medium mb-4">
+    <p>{{content}}</p>
+  </div>
+  <div class="is-size-6">
+    <p>Posted on {{format_date createdAt}}</p>
+  </div>
 
   <div class="buttons is-justify-content-end">
     <button class="delete-button button is-success is-inverted">
       Delete
     </button>
 
-    <button class="update-button button is-success is-inverted">
+    <button class="button modal-button is-success is-inverted" data-target="modal" aria-haspopup="true">
       Update
     </button>
   </div>
 
 </section>
 
+{{> modal}}
 
-<form class='new-comment notification is-success is-light'>
-    <label class='has-text-weight-bold is-size-4' for='comment'>Comment</label>
-    <br>
-    <textarea id='comment' name='comment' rows='2' cols='30'></textarea>
-    <button class="button is-success ml-4" type='submit' value='Submit'>Submit</button>
-</form>
+{{> new-comment}}
 
 <div class="comments-container">
-    {{> comments }}
+  {{> comments }}
 </div>
 
 <script src="/js/new-comment.js"></script>
 <script src="/js/delete-post.js"></script>
+<script src="/js/modal.js"></script>
 <script src="/util/helper.js"></script>
