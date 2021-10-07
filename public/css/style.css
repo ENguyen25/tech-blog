@@ -1,0 +1,17 @@
+.notification a:not(.button):not(.dropdown-item) {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.notification a:not(.button):not(.dropdown-item):hover {
+    color: currentColor;
+    text-decoration: underline;
+}
+
+.navbar-item img {
+    max-height: 7rem;
+}
+
+.field {
+    width: 60%;
+}

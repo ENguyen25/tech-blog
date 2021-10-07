@@ -4,17 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Technology for Social Good</title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/greencircle.jfif"/>
 </head>
-<body>
+<body class="container">
 
-<header>
-  <a href="/">Home Page</a>
-  <a href="/login">Login</a>
-  <a href="/signup">Signup</a>
-</header>
+<nav class="navbar pt-4 pb-4" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/images/TechBlog_Logo.png" width="200" height="80">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item is-size-4" href="/">
+        Home
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          {{#if logged_in}}
+          <a class="button is-success" href="/logout">
+            <strong>Log Out</strong>
+          </a>
+          {{else}}
+          <a class="button is-success" href="/signup">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Log in
+          </a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
 
 {{{body}}}
 
 </body>
+
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
 </html>

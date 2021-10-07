@@ -1,26 +1,36 @@
-<div class='add-blog-post'>
-    <h2>Add new blog post</h2>
-    <form class='new-blog-post'>
-      <label for='post_name'>Title:</label>
-      <br />
-      <textarea id='post_name' name='post_name' rows='2' cols='30'></textarea>
-      <br />
-      <label for='content'>Content:</label>
-      <br />
-      <textarea id='content' name='content' rows='5' cols='30'></textarea>
-      <br />
-      <button type='submit' value='Submit'>Submit</button>
-    </form>
-</div>
+<div class="columns">
 
-{{#each blogPosts as |posts|}}
-<section class="card">
-  <a href="/post/{{posts.id}}">
-      <div class="blog-post-header">
-        <p>{{posts.title}}</p>
-      </div>
-  </a>
-</section>
-{{/each}}
+  <div class="column is-8">
+    {{#each blogPosts as |posts|}}
+    <div class="notification is-light">
+      <a href="/post/{{posts.id}}">
+          <div class="blog-post-header">
+            <p class="title is-3 is-spaced">{{posts.title}}</p>
+            <p class="subtitle is-5">{{posts.content}}</p>
+            <p class="content is-6">Posted on {{format_date posts.createdAt}}</p>
+          </div>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+  
+  <div class='column'>
+    <div class="notification is-success">
+      <h2 class="title">Add new blog post</h2>
+      <form class='new-blog-post'>
+        <label for='post_name'>Title:</label>
+        <br />
+        <textarea id='post_name' name='post_name' rows='2' cols='30'></textarea>
+        <br />
+        <label for='content'>Content:</label>
+        <br />
+        <textarea id='content' name='content' rows='5' cols='30'></textarea>
+        <br />
+        <button class="button is-success is-inverted mt-4" type='submit' value='Submit'>Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>
 
 <script src="/js/new-post.js"></script>

@@ -1,16 +1,38 @@
-<div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn" type="submit">Login</button>
-      </div>
-    </form>
+<div class="block">
+  <h1 class="title is-2 has-text-grey">Log In Here!</h1>
+</div>
+
+<form class="login-form is-4">
+
+  <div class="field">
+    <label class="label has-text-grey">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="email" placeholder="Email input" id="email-login">
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
   </div>
+
+  <div class="field">
+    <label class="label has-text-grey">Password</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input" type="password" placeholder="Password input" id="password-login">
+      <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-success">Submit</button>
+    </div>
+    <div class="control">
+      <button class="button is-success is-light">Cancel</button>
+    </div>
+  </div>
+
+</form>
+
+  <script src="/js/login.js"></script>
