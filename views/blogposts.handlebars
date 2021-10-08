@@ -1,36 +1,10 @@
-<section class="notification is-success">
-  <div class="is-size-3 has-text-weight-bold is-underlined mb-4">
-    <p>{{title}}</p>
-  </div>
-  <div class="is-size-4 has-text-weight-medium">
-    <p>{{username}}</p>
-  </div>
-  <div class="is-size-4 has-text-weight-medium mb-4">
-    <p>{{content}}</p>
-  </div>
-  <div class="is-size-6">
-    <p>Posted on {{format_date createdAt}}</p>
-  </div>
-
-  <div class="buttons is-justify-content-end">
-    <button class="delete-button button is-success is-inverted">
-      Delete
-    </button>
-
-    <button class="button modal-button is-success is-inverted" data-target="modal" aria-haspopup="true">
-      Update
-    </button>
-  </div>
-
-</section>
+{{> blogpost}}
 
 {{> modal}}
 
 {{> new-comment}}
 
-<div class="comments-container">
-  {{> comments }}
-</div>
+{{> comments }}
 
 <script src="/js/new-comment.js"></script>
 <script src="/js/delete-post.js"></script>

@@ -5,7 +5,7 @@ async function signUpHandler(event) {
     const email = document.querySelector('#email-signup').value;
     const password = document.querySelector('#password-signup').value;
     
-    const response = await fetch(`/user/signup`, {
+    const response = await fetch(`/api/user/signup`, {
       method: 'POST',
       body: JSON.stringify({
         username,
@@ -20,7 +20,9 @@ async function signUpHandler(event) {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to add user');
+      // alert('Failed to add user');
+      const test = await response.json();
+      console.log(test)
     }
   }
 

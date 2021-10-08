@@ -14,8 +14,8 @@ async function deletePostHandler() {
 
 async function updatePostHandler() {
     const fetchID = window.location.pathname.split('/')[2]
-    const title = document.querySelector('#update-title');
-    const content = document.querySelector('#update-content');
+    const title = document.querySelector('#update-title').value;
+    const content = document.querySelector('#update-content').value;
 
     const response = await fetch(`/api/post/${fetchID}`, {
         method: 'PUT',
